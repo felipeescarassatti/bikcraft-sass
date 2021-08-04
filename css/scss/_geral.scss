@@ -77,20 +77,34 @@ img {
   background-color: $cor-primaria;
   padding: 15px 0px;
   z-index: 10;
+  @include device(m) {
+    position: relative;
+    padding-bottom: 0;
+  }
 }
 
 .header img {
   width: 100px;
+  @include device(m) {
+    width: 140px;
+    margin: 0 auto 10px auto;
+  }
 }
 
 .header_menu {
   text-align: right;
+  @include device(m) {
+    text-align: center;
+  }
 }
 
 .header_menu ul li {
   display: inline-block;
   margin-left: 25px;
   margin-top: 20px;
+  @include device(m) {
+    margin: 5px;
+  }
 }
 
 .header_menu ul li a {
@@ -100,14 +114,26 @@ img {
   letter-spacing: 0.1em;
   padding: 10px 0;
   @include tipo-1(14);
+  @include device(m) {
+    border: 4px solid $cor-preta;
+    width: 130px;
+    display: block;
+    float: left;
+  }
 }
 
 .header_menu ul li a:hover {
   color: $cor-branca;
+  @include device(m) {
+    border: 4px solid $cor-branca;
+  }
 }
 
 .header_menu ul li a.menu-ativo {
   color: $cor-branca;
+  @include device(m) {
+    border: 4px solid $cor-branca;
+  }
 }
 
 /* Introdução */
@@ -120,6 +146,12 @@ img {
   margin-top: 92px;
   text-align: center;
   padding-top: 80px;
+  @include device(m) {
+    margin-top: 0;
+    padding-top: 20px;
+    background: url("./img/bg-intro-mobile.jpg") no-repeat center;
+    background-size: cover;
+  }
 }
 
 .introducao h1 {
@@ -127,6 +159,9 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   @include tipo-1(48);
+  @include device(m) {
+    @include tipo-1(36);
+  }
 }
 
 .quote-externo {
@@ -165,6 +200,9 @@ img {
   text-align: center;
   color: $cor-branca;
   padding-top: 40px;
+  @include device(m) {
+    margin-top: 0px;
+  }
 }
 
 .introducao-interna h1 {
@@ -229,6 +267,9 @@ img {
   padding-top: 40px;
   text-align: center;
   clear: both;
+  @include device(m) {
+    padding-top: 20px;
+  }
 }
 
 .call p {
@@ -278,6 +319,12 @@ img {
   top: 205px;
   left: 168px;
   z-index: -1;
+  @include device(t) {
+    left: 72px;
+  }
+  @include device(m) {
+    display: none;
+  }
 }
 
 .qualidade img {
@@ -292,6 +339,10 @@ img {
 .qualidade-lista li {
   text-align: center;
   padding: 0 40px;
+  @include device(t) {
+    text-align: center;
+    padding: 0 10px;
+  }
 }
 
 .qualidade-lista li h3 {
@@ -363,6 +414,11 @@ img {
 .footer-redes ul li {
   display: inline-block;
   margin-right: 10px;
+  @include device(t) {
+    display: inline-block;
+    margin-right: 10px;
+    width: 40px;
+  }
 }
 
 .footer-redes ul li a {

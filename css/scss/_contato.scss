@@ -9,6 +9,9 @@
 
 .form {
   padding-right: 60px;
+  @include device(m) {
+    padding-right: 00px;
+  }
 }
 
 .form label {

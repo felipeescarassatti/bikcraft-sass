@@ -5,6 +5,9 @@
 
 .produto-item {
   padding-top: 60px;
+  @include device(m) {
+    padding-top: 20px;
+  }
 }
 
 .produto-item h2 {
@@ -17,6 +20,21 @@
   top: -180px;
   margin-bottom: -56px;
   @include tipo-1(36);
+  @include device(t) {
+    @include tipo-1(28);
+    top: -150px;
+  }
+  @include device(m) {
+    @include tipo-1(28);
+    top: -105px;
+    margin-bottom: -80px;
+  }
+}
+
+.produto-mobile {
+  @include device(m) {
+    margin: -18px 0;
+  }
 }
 
 .produto-item h2:after,
@@ -32,6 +50,9 @@
 .produto-icone {
   background: $cor-preta;
   padding: 42px 0;
+  @include device(t) {
+    padding: 34px 0;
+  }
 }
 
 .produto-icone img {
@@ -47,6 +68,15 @@
   padding: 20px;
   height: 180px;
   @include tipo-1(18);
+  @include device(t) {
+    @include tipo-1(14);
+    height: 140px;
+  }
+  @include device(m) {
+    @include tipo-1(14);
+    padding: 20px;
+    height: 230px;
+  }
 }
 
 .produto-info ul li {
@@ -62,6 +92,24 @@
   padding: 15px;
   margin-bottom: 2px;
   @include tipo-1(18);
+  @include device(t) {
+    width: 179px;
+    height: 38px;
+    @include tipo-1(14);
+    padding-top: 9px;
+  }
+  @include device(m) {
+    width: 147px;
+    height: 38px;
+    @include tipo-1(14);
+    padding: 10px;
+  }
+}
+
+.produto-info-mobile {
+  @include device(m) {
+    margin: -80px 0;
+  }
 }
 
 /* Orçamento */
